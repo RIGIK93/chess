@@ -1,0 +1,21 @@
+package board
+
+type Move struct {
+	to   Square
+	from Square
+}
+
+func (move *Move) GetTo() Square {
+	return move.to
+}
+
+func (move *Move) GetFrom() Square {
+	return move.from
+}
+
+func NewMove(from Square, to Square) Move {
+	return Move{
+		from: from,
+		to:   to,
+	}
+}
